@@ -1,0 +1,311 @@
+<script id="game-screen" type="text/html">
+    <div id="game-screen">
+        <div class="floating-points-high" id ="floating-points-high">
+            <p id="floating-points-high-score">0</p>
+        </div>
+        <div class="floating-points-low" id ="floating-points-low">
+            <p id="floating-points-low-score">0</p>
+        </div>
+        <div class="floating-points-negative" id ="floating-points-negative">
+            <p id="floating-points-negative-score">0</p>
+        </div>
+        <div id="game-health-container">
+            <i id="game-heart-icon" class="fas fa-heart"></i>
+            <div class="lives-container">
+                <p id="lives-number"></p>
+            </div>
+        </div>
+        <div id="game-scoreline-container">
+            <div class="game-scoreline">
+                <p id="score">0</p>
+            </div>
+            <div class="game-scoreline-img">
+                <img src="./assets/screen_game/vaccine.png" alt="">
+            </div>
+        </div>
+        <div id="game-power-up">
+            <img src="" id="game-power-up-img" alt="">
+        </div>
+
+        <div id="game-controls">
+            <div id="skill_projectile_mask">
+                <img src="./assets/screen_game/skill_projectile_mask.png" alt="">
+                <span id="masks-amount" class="badge">3</span>
+            </div>
+            <div id="skill_wash_hands">
+                <img src="./assets/screen_game/skill_wash_hands.png" alt="">
+            </div>
+            <div id="skill_nurse_calling">
+                <img src="./assets/screen_game/skill_nurse_calling.png" alt="">
+            </div>
+        </div>
+    </div>
+</script>
+<script id="game-over-screen" type="text/html">
+    <div id="game-over-screen">
+        <h1 class="game-over-title" tag="game_over" ></h1>
+        <img src="./assets/screen_game_over/player.png" alt="">
+        <div class="game-over-screen-actions">
+            <button id="game-over-play-again" class="btn-yellow" tag="play_again"></button>
+            <button id="game-over-continue" class="btn-purple" tag="continue_game"></button>
+        </div>
+    </div>
+</script>
+<script id="highscore-screen" type="text/html">
+    <div id="highscore-screen">
+        <h1 class="highscore-title" tag="score"></h1>
+        <div id="highscore-screen-info">
+            <img src="./assets/screen_highscore/vaccine.png" alt="">
+            <h1 id="last_score"></h1>
+            <h2 tag="vaccines"></h2>
+        </div>
+        <div class="form">
+            <input type="text" id="nickname" name="nickname" tag="enter_nickname" style="display: none">
+            <button id="btn-nickname" class="btn-yellow" tag="submit_nickname" style="display: none"></button>
+            <button id="btn-share" class="btn-yellow" tag="share" style="display: none"></button>
+            <button id="btn-play-again" class="btn-purple" tag="play_again" style="display: none"></button>
+            <button id="btn-menu" class="btn-purple" tag="menu" style="display: none"></button>
+        </div class="form">
+    </div>
+</script>
+<script id="hint-screen" type="text/html">
+    <div id="hint-screen">
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <!-- image -->
+                <div class="swiper-slide-img-div">
+                  <img class="swiper-slide-img" src="./assets/img_tips/tips_mission.png">
+                </div>
+                <!-- tip -->
+                <div class="swiper-slide-tip">
+                  <p class="swiper-slide-tip-text" tag="mission"></p>
+                </div>
+                <div class="swiper-slide-button-div">
+                  <button class="swiper-slide-loading" tag="loading"></button>
+                  <button class="swiper-slide-button" tag="skip"></button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <!-- image -->
+                <div class="swiper-slide-img-div">
+                  <img class="swiper-slide-img" src="./assets/img_tips/tips_sneeze.png">
+                </div>
+                <!-- tip -->
+                <div class="swiper-slide-tip">
+                  <p class="swiper-slide-tip-text" tag="tip_1"></p>
+                </div>
+                <div class="swiper-slide-button-div">
+                  <button class="swiper-slide-loading" tag="loading"></button>
+                  <button class="swiper-slide-button" tag="skip"></button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <!-- image -->
+                <div class="swiper-slide-img-div">
+                  <img class="swiper-slide-img" src="./assets/img_tips/tips_group.png">
+                </div>
+                <!-- tip -->
+                <div class="swiper-slide-tip">
+                  <p class="swiper-slide-tip-text" tag="tip_2"></p>
+                </div>
+                <div class="swiper-slide-button-div">
+                  <button class="swiper-slide-loading" tag="loading"></button>
+                  <button class="swiper-slide-button" tag="skip"></button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <!-- image -->
+                <div class="swiper-slide-img-div">
+                  <img class="swiper-slide-img" src="./assets/img_tips/tips_coughing.png">
+                </div>
+                <!-- tip -->
+                <div class="swiper-slide-tip">
+                  <p class="swiper-slide-tip-text" tag="tip_3"></p>
+                </div>
+                <div class="swiper-slide-button-div">
+                  <button class="swiper-slide-loading" tag="loading"></button>
+                  <button class="swiper-slide-button" tag="skip"></button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <!-- image -->
+                <div class="swiper-slide-img-div">
+                  <img class="swiper-slide-img" src="./assets/img_tips/tips_wash.png">
+                </div>
+                <!-- tip -->
+                <div class="swiper-slide-tip">
+                  <p class="swiper-slide-tip-text" tag="tip_4"></p>
+                </div>
+                <div class="swiper-slide-button-div">
+                  <button class="swiper-slide-loading" tag="loading"></button>
+                  <button class="swiper-slide-button" tag="skip"></button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <!-- image -->
+                <div class="swiper-slide-img-div">
+                  <img class="swiper-slide-img" src="./assets/img_tips/tips_masks.png">
+                </div>
+                <!-- tip -->
+                <div class="swiper-slide-tip">
+                  <p class="swiper-slide-tip-text" tag="tip_5"></p>
+                </div>
+                <div class="swiper-slide-button-div">
+                  <button class="swiper-slide-loading" tag="loading"></button>
+                  <button class="swiper-slide-button" tag="skip"></button>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          </div>
+    </div>
+</script>
+<script id="leader-board-screen" type="text/html">
+    <div id="leader-board-screen">
+
+        <div id="leader-board-container">
+            <div id="leader-board-scores">
+                <div id="leader-board-top-menu">
+                    <div class="leader-board-active-tab" id="leader-board-high-tab">
+                        <h2 id="high-score-tab" tag="high_score"></h2>
+                    </div>
+                    <div id="leader-board-total-tab">
+                        <h2 id="total-score-tab" tag="total_score"></h2>
+                    </div>
+                </div>
+                <div id="leader-board-high-scores">
+                    <h1 id="high_loading" style="margin: auto;" tag="loading"></h1>
+                    <h1 id="high_no_internet" style="margin: auto; display: none" tag="no_internet"></h1>
+                    <h1 id="high_error" style="margin: auto; display: none" tag="error"></h1>
+                </div>
+
+                <div id="leader-board-total-scores">
+                    <h1 id="total_loading" style="margin: auto;" tag="loading"></h1>
+                    <h1 id="total_no_internet" style="margin: auto; display: none" tag="no_internet"></h1>
+                    <h1 id="total_error" style="margin: auto; display: none" tag="error"></h1>
+                </div>
+
+                <div id="leader-board-user-score">
+                </div>
+            </div>
+
+            <button id="btn-back" class="btn-yellow" tag="back"></button>
+        </div>
+    </div>
+</script>
+<script id="loader-screen" type="text/html">
+    <div id="loader-screen">
+        <h2 id="loader-loading" tag="loading"></h2>
+    </div>
+</script>
+<script id="main-menu-screen" type="text/html">
+    <div id="main-menu-screen">
+        <div id="main-menu-sound">
+            <button id="btn-sound"><i class="fas fa-volume-up"></i></button>
+        </div>
+        <div id="main-menu">
+            <img src="./assets/screen_main_menu/logo.png" alt="">
+            <button id="btn-play" class="btn-yellow"  value="start" tag="start"></button>
+            <button id="btn-leader-board" class="btn-purple" tag="scores"></button>
+        </div>
+    </div>
+</script>
+<script id="website-screen" type="text/html">
+	<div id="website-screen">
+		<div class="logo">
+			<img id="game_logo" src="./assets/website/logo.png">
+		</div>
+			<div class="phone">
+				<div class="temp-wrapper">
+					<div class="px">
+						<div class="px__body">
+							<div class="px__body__cut"></div>
+							<div class="px__body__speaker"></div>
+							<div class="px__body__sensor"></div>
+	
+							<div class="px__body__mute"></div>
+							<div class="px__body__up"></div>
+							<div class="px__body__down"></div>
+							<div class="px__body__right"></div>
+						</div>
+	
+						<div class="px__screen">
+							<div class="px__screen__">
+								<div class="px__screen__frame">
+									<div class="content" id="game-content" style="z-index: 9999;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="store-buttons">
+				<div class="store-container">
+					<div class="ios">
+            <a href="https://apps.apple.com/us/app/vrs-fight-club/id1503524573">
+              <img id="ios_store" src="./assets/website/store-buttons/ios_store.png">
+            </a>
+					</div>
+					<div class="android">
+            <a href="https://play.google.com/store/apps/details?id=com.magikbee.vrsfightandroid">
+              <img id="android_store" src="./assets/website/store-buttons/android_store.png">
+            </a>
+					</div>
+					<div class="amazon">
+            <a href="https://www.amazon.com/magikbee-Lda-VRS-Fight-Club/dp/B08655BXPC/ref=sr_1_2?qid=1584979656&refinements=p_4%3A+Lda%5Ccmagikbee&s=mobile-apps&sr=1-2">
+              <img id="amazon_store" src="./assets/website/store-buttons/amazon_store.png">
+            </a>
+					</div>
+				</div>
+			</div>
+			<div class="languages">
+				<p>Available in the following languages:</p>
+				<div class="image-container">
+					<div class="image-cell">
+						<img class="image" src="./assets/website/flags/English.png">
+					</div>
+					<div class="image-cell">
+						<img class="image" src="./assets/website/flags/Spanish.png">
+					</div>
+					<div class="image-cell">
+						<img class="image" src="./assets/website/flags/Portuguese.png">
+					</div>
+					<div class="image-cell">
+						<img class="image" src="./assets/website/flags/French.png">
+					</div>
+					<div class="image-cell">
+						<img class="image" src="./assets/website/flags/German.png">
+					</div>
+					<div class="image-cell">
+						<img class="image" src="./assets/website/flags/Italian.png">
+					</div>
+					<div class="image-cell">
+						<img class="image" src="./assets/website/flags/Russian.png">
+					</div>
+					<div class="image-cell">
+						<img class="image" src="./assets/website/flags/Arabic.png">
+					</div>
+					<div class="image-cell">
+						<img class="image" src="./assets/website/flags/chinese.png">
+					</div>
+					<div class="image-cell">
+						<img class="image" src="./assets/website/flags/japanese.png">
+					</div>
+				</div>
+			</div>
+			<div class="magikbee">
+				<a href="https://www.magikbee.com" target="_blank">
+					<img id="magikbee-img" src="./assets/website/magikbee.png">
+				</a>
+			</div>
+		</div>
+	</div>
+</script>
